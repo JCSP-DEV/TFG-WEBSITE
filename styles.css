@@ -434,4 +434,91 @@ footer {
     .hero {
         min-height: -webkit-fill-available;
     }
+}
+
+/* Language selector styles */
+.language-selector {
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.language-selector select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #404040;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1em;
+}
+
+.language-selector select:hover {
+    background-color: #404040;
+    border-color: #4CAF50;
+}
+
+.language-selector select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.floating-language-selector {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 2000;
+    background: rgba(33, 33, 34, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    padding: 0.5rem;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.floating-language-selector .language-selector {
+    margin: 0;
+}
+
+.floating-language-selector .language-selector select {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #FFD500;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1em;
+    transition: border 0.3s, background 0.3s;
+}
+
+.floating-language-selector .language-selector select:hover,
+.floating-language-selector .language-selector select:focus {
+    border-color: #ffe066;
+    background-color: #404040;
+    outline: none;
+}
+
+@media (max-width: 600px) {
+    .floating-language-selector {
+        right: 1rem;
+        bottom: 1rem;
+        padding: 0.4rem;
+        border-radius: 8px;
+    }
+    .floating-language-selector .language-selector select {
+        font-size: 0.95rem;
+        padding: 0.4rem 2rem 0.4rem 0.7rem;
+    }
 } 
